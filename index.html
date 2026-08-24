@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Lighthouse Center for Therapy &amp; Play offers virtual, trauma-focused therapy for adults in Maryland, Washington D.C., Virginia, Florida, and Georgia.">
 <title>Lighthouse Center for Therapy &amp; Play</title>
 
 <style>
@@ -209,6 +203,15 @@
   .nav-links { display: none; }
   @media (min-width: 860px) { .nav-links { display: flex; } }
   .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 18px 32px 24px; gap: 16px; }
+
+  @media (max-width: 480px) {
+    .nav-row { padding: 14px 18px; gap: 10px; }
+    .brand svg { width: 23px; height: 23px; }
+    .brand-word { flex-direction: column; align-items: flex-start; gap: 1px; }
+    .brand-name { font-size: 1.14rem; }
+    .brand-sub { font-size: 0.6rem; letter-spacing: 0.12em; }
+    .nav-links.open { padding: 16px 18px 20px; }
+  }
 
   /* ---------- Hero ---------- */
   .hero {
@@ -438,12 +441,9 @@
   .legal-note { font-size: 0.8rem; color: var(--on-dusk-soft); opacity: 0.85; max-width: 68ch; }
   .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 0.82rem; color: var(--on-dusk-soft); margin-top: 8px; }
 </style>
-</head>
-<body>
-
 
 <nav class="site-nav">
-  <div class="nav-row wrap" style="padding-left:0; padding-right:0;">
+  <div class="nav-row wrap">
     <a class="brand" href="#top">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M9 3h6l1.4 4.2H7.6L9 3Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
@@ -807,6 +807,3 @@
     }
   })();
 </script>
-
-</body>
-</html>
