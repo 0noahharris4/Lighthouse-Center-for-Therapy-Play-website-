@@ -204,12 +204,15 @@
   @media (min-width: 860px) { .nav-links { display: flex; } }
   .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 18px 32px 24px; gap: 16px; }
 
-  @media (max-width: 480px) {
+  @media (max-width: 859px) {
     .nav-row { padding: 14px 18px; gap: 10px; }
-    .brand svg { width: 23px; height: 23px; }
-    .brand-word { flex-direction: column; align-items: flex-start; gap: 1px; }
-    .brand-name { font-size: 1.14rem; }
-    .brand-sub { font-size: 0.6rem; letter-spacing: 0.12em; }
+    .brand { min-width: 0; }
+    .brand svg { width: 22px; height: 22px; }
+    .brand-word { flex-direction: column; align-items: flex-start; gap: 1px; min-width: 0; }
+    .brand-name { font-size: clamp(0.98rem, 0.55rem + 2.6vw, 1.3rem); white-space: nowrap; }
+    .brand-sub { font-size: clamp(0.58rem, 0.42rem + 0.9vw, 0.72rem); letter-spacing: 0.1em; white-space: nowrap; }
+  }
+  @media (max-width: 480px) {
     .nav-links.open { padding: 16px 18px 20px; }
   }
 
