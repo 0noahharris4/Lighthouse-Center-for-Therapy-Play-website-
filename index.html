@@ -328,6 +328,22 @@
   @media (prefers-reduced-motion: reduce) { .fl svg { animation: none; } }
   .section-divider svg { display: block; width: 100%; height: 56px; }
 
+  /* ---------- Come as you are ---------- */
+  .come-band { padding: 0 0 96px; }
+  .come-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow); padding: 56px 32px 48px; text-align: center; position: relative; overflow: hidden; }
+  .come-card::before { content: ""; position: absolute; inset: 0; background: radial-gradient(90% 70% at 50% 0%, rgba(227,168,87,0.16) 0%, rgba(227,168,87,0) 60%); pointer-events: none; }
+  .come-card > * { position: relative; }
+  .come-card h2 { font-size: clamp(1.9rem, 3.6vw, 2.5rem); margin-bottom: 14px; }
+  .come-card h2 em { font-style: italic; color: var(--heather); }
+  .come-lede { max-width: 560px; margin: 0 auto; color: var(--ink-soft); font-size: 1.05rem; }
+  .come-points { display: grid; grid-template-columns: 1fr; gap: 28px; margin-top: 40px; text-align: left; }
+  @media (min-width: 760px) { .come-points { grid-template-columns: repeat(3, 1fr); gap: 36px; } }
+  .come-point { border-top: 2px solid var(--beacon); padding-top: 16px; }
+  .come-point h3 { font-size: 1.12rem; margin-bottom: 8px; }
+  .come-point p { color: var(--ink-soft); font-size: 0.96rem; }
+  .come-cta { margin-top: 40px; }
+  @media (min-width: 760px) { .come-card { padding: 64px 56px 56px; } }
+
   /* ---------- About ---------- */
   .about-grid { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: start; }
   @media (min-width: 860px) { .about-grid { grid-template-columns: 0.85fr 1.4fr; gap: 64px; } }
@@ -679,6 +695,32 @@
       </div>
     </div>
 
+  </section>
+
+  <!-- COME AS YOU ARE -->
+  <section class="come-band on-mist-alt" aria-labelledby="come-title">
+    <div class="wrap reveal">
+      <div class="come-card">
+        <p class="eyebrow" style="justify-content:center;">Come as you are</p>
+        <h2 id="come-title">You don&rsquo;t have to have it <em>all figured out.</em></h2>
+        <p class="come-lede">Whatever you&rsquo;re carrying and however you arrive &mdash; tired, unsure, guarded, or hopeful &mdash; you&rsquo;re welcome here exactly as you are.</p>
+        <div class="come-points">
+          <div class="come-point">
+            <h3>No need to explain it all</h3>
+            <p>You decide what to share and when. We start wherever feels manageable.</p>
+          </div>
+          <div class="come-point">
+            <h3>Your pace, your terms</h3>
+            <p>Healing isn&rsquo;t a race. We move at the speed that feels safe to you.</p>
+          </div>
+          <div class="come-point">
+            <h3>From wherever you feel safe</h3>
+            <p>Sessions are entirely virtual, so you can join from the place that feels most like yourself.</p>
+          </div>
+        </div>
+        <div class="come-cta"><a href="#contact" class="btn btn-beacon">Schedule a Free Consultation</a></div>
+      </div>
+    </div>
   </section>
 
   <!-- APPROACH -->
